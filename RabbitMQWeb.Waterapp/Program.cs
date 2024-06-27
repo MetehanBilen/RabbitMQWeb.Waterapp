@@ -10,6 +10,7 @@ builder.Services.AddSingleton(sp => new ConnectionFactory() {
     Uri = new Uri(builder.Configuration.GetConnectionString("RabbitMQ")) });
 
 builder.Services.AddSingleton<RabbitMQClientService>();
+builder.Services.AddSingleton<RabbitMQPublisher>(); 
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
