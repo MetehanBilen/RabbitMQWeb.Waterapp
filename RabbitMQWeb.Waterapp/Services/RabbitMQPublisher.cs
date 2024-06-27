@@ -13,7 +13,7 @@ public class RabbitMQPublisher
         _rabbitMQClientService = rabbitMQClientService;
     }
 
-    public void Publish(productImageCreatedevent productImageCreatedevent) 
+    public void Publish(productImageCreatedEvent productImageCreatedevent) 
     {
         var channel = _rabbitMQClientService.Connect();
 

@@ -34,7 +34,7 @@ public class RabbitMQClientService: IDisposable
 
         _channel.QueueDeclare(QueueName,true,false,false,null);
 
-        _channel.QueueBind(ExchangeName, QueueName, RoutingWatermark);
+        _channel.QueueBind(QueueName ,ExchangeName , RoutingWatermark,null);
         _logger.LogInformation("RabbitMQ ile baglantı kuruldu.");
 
         return _channel;
